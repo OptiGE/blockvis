@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Blocket Visualization",
+  "version": "1.0",
+  "description": "Visualize car listings on blocket.se",
+  "permissions": ["tabs", "activeTab", "https://www.blocket.se/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.blocket.se/*"],
+      "js": ["blockvis.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "car.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "car.png"
+    },
+    "default_title": "Blocket Visualization"
+  }
+}
